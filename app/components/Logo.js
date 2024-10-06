@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Logo() {
   return (
     <Fragment>
-      <div class="hidden lg:flex">
+      <div className="hidden lg:flex">
         <Link aria-label="Home" href="/">
           <Image
             src="/logo.svg"
