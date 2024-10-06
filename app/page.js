@@ -2,10 +2,11 @@ import { Fragment } from "react";
 
 
 
+
 export default function Home() {
   return (
     <Fragment>
-      <p>Home Page</p>
+      <p>Home page</p>
     </Fragment>
   );
 }

@@ -10,7 +10,7 @@ export default function Logo() {
           <Image
             src="/logo.svg"
             alt="DocuCraft"
-            class="h-6 w-auto"
+            className="h-6 w-auto"
             width={100}
             height={24}
             priority

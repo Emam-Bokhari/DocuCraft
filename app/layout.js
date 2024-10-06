@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <div className="h-full lg:ml-72 xl:ml-80">
-          <Header />
+          <Header docs={allDocuments} />
           <div className="relative px-4 pt-14 sm:px-6 lg:px-8">
             <main className="flex-auto py-16">
               {/* Green Top Overlay  */}
