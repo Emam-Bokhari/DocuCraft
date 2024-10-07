@@ -28,6 +28,10 @@ export default async function ContentDisplay({ id }) {
           {documentContent?.tags &&
             documentContent?.tags?.map((tag) => <Tag key={tag} tag={tag} />)}
         </div>
+        <div
+          className="lead"
+          dangerouslySetInnerHTML={{__html: documentContent?.contentHtml }}
+        />
       </article>
     </Fragment>
   );
