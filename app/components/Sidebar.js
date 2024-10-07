@@ -18,7 +18,7 @@ export default function Sidebar({ docs }) {
               <Link
                 aria-current="page"
                 className="flex justify-between gap-2 py-1 pl-4 pr-3 text-sm text-zinc-900 transition dark:text-white"
-                href={`/docs/${root.id}`}
+                href={`/doc/${root.id}`}
               >
                 <span className="truncate">{root?.title}</span>
               </Link>
@@ -29,7 +29,7 @@ export default function Sidebar({ docs }) {
                       <Link
                         aria-current="page"
                         className="flex justify-between gap-2 py-1 pl-8 pr-3 text-sm text-zinc-900 transition dark:text-white"
-                        href={`/docs/${root.id}/${item.id}`}
+                        href={`/doc/${root.id}/${item.id}`}
                       >
                         <span className="truncate">{item?.title}</span>
                       </Link>
