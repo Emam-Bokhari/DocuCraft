@@ -1,6 +1,8 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import {remark} from "remark";
+import html from "remark-html";
 
 const postDirectory = path.join(process.cwd(), "app", "docs");
 
@@ -53,6 +55,6 @@ export async function getDocumentContent(id) {
   return {
     id,
     contentHtml,
-    ...matterResult.content,
+    ...matterResult.data,
   };
 }
