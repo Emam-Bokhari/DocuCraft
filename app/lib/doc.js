@@ -36,3 +36,23 @@ export const getAllDocuments = () => {
     }
   });
 };
+
+export async function getDocumentContent(id) {
+  const fullPath = path.join(postDirectory, `${id}.md`);
+
+  const filesContent = fs.readFileSync(fullPath, "utf8");
+
+  const matterResult = matter(filesContent);
+
+  const processedContent = await remark()
+    .use(html)
+    .process(matterResult.content);
+
+  const contentHtml = processedContent.toString();
+
+  return {
+    id,
+    contentHtml,
+    ...matterResult.content,
+  };
+}
